@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悩みハブ | 新規投稿</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- ロゴ -->
+                <a href="/index.html" class="text-2xl font-bold text-indigo-600">
+                    悩みハブ
+                </a>
+                
+                <!-- デスクトップ用ナビゲーション -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">Q&A</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">記事</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">つぶやき</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">テンプレ集</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">ルール</a>
+                    <a href="#" class="ml-4 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition duration-150 shadow-sm">
+                        投稿する
+                    </a>
+                </div>
+
+                <!-- モバイル用ハンバーガーボタン (JSなしのプレースホルダー) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            
+            <h1 class="text-3xl font-bold text-gray-900 mb-8">
+                新規投稿
+            </h1>
+
+            <div class="bg-white rounded-xl shadow-lg">
+                <!-- 投稿タイプ選択タブ -->
+                <!-- TODO: JSでタブ切り替え機能を実装する必要があります -->
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-6 px-6" aria-label="Tabs">
+                        <!-- 現在選択中のタブ -->
+                        <a href="#" class="border-indigo-500 text-indigo-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" aria-current="page">
+                            Q&A
+                        </a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            記事 (Markdown)
+                        </a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                            つぶやき
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- 投稿フォーム -->
+                <form class="p-6 md:p-8 space-y-6">
+                    
+                    <!-- タイトル (Q&A, 記事 のみ表示) -->
+                    <div>
+                        <label for="title" class="block text-sm font-medium text-gray-700 mb-1">
+                            タイトル (Q&A)
+                        </label>
+                        <input type="text" name="title" id="title" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="悩みの概要を簡潔に (例: 未経験からの転職活動について)">
+                    </div>
+
+                    <!-- 本文 -->
+                    <div>
+                        <label for="content" class="block text-sm font-medium text-gray-700 mb-1">
+                            本文
+                        </label>
+                        <!-- 
+                            「記事」の場合は高さを変更 (例: rows="15")
+                            「つぶやき」の場合は (例: rows="4")
+                        -->
+                        <textarea id="content" name="content" rows="8" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="背景、具体的な状況、聞きたいことを詳しく書いてみましょう。"></textarea>
+                        <!-- 「記事」の場合はここにMarkdownプレビュー用のエリアを追加 -->
+                    </div>
+
+                    <!-- タグ -->
+                    <div>
+                        <label for="tags" class="block text-sm font-medium text-gray-700 mb-1">
+                            タグ (5個まで)
+                        </label>
+                        <input type="text" name="tags" id="tags" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="例: #仕事 #転職 #30代 (スペースまたはカンマで区切る)">
+                        <!-- TODO: JSでタグ入力UIをリッチにする -->
+                    </div>
+
+                    <!-- 匿名設定 -->
+                    <div class="flex items-center">
+                        <input id="anonymous" name="anonymous" type="checkbox" checked class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <label for="anonymous" class="ml-2 block text-sm text-gray-900">
+                            固定ハンドル（匿名）で投稿する
+                        </label>
+                    </div>
+
+                    <hr class="border-gray-200">
+
+                    <!-- アクションボタン -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <p class="text-xs text-gray-500 text-left sm:order-1">
+                            投稿する前に<a href="#" class="text-indigo-600 hover:underline">投稿ルール</a>をご確認ください。
+                        </p>
+                        <div class="flex w-full sm:w-auto space-x-4 sm:order-2">
+                            <button type="button" class="w-1/2 sm:w-auto px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition duration-150">
+                                下書き保存
+                            </button>
+                            <button type="submit" class="w-1/2 sm:w-auto px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition duration-150">
+                                投稿する
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-gray-400 mt-20">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p>&copy; 2025 悩みハブ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
