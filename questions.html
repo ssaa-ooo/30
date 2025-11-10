@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悩みハブ | Q&A一覧</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">悩みハブ</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="questions.html" class="font-semibold text-indigo-600">Q&A</a>
+                    <a href="articles.html" class="text-gray-600 hover:text-indigo-600">記事</a>
+                    <a href="talks.html" class="text-gray-600 hover:text-indigo-600">つぶやき</a>
+                    <a href="templates.html" class="text-gray-600 hover:text-indigo-600">テンプレ集</a>
+                    <a href="rules.html" class="text-gray-600 hover:text-indigo-600">ルール</a>
+                    <a href="compose.html" class="ml-4 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 shadow-sm">
+                        投稿する
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">
+                    Q&A一覧
+                </h1>
+                <a href="compose.html" class="px-5 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 shadow-sm hidden sm:inline-block">
+                    新しく質問する
+                </a>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12">
+
+                <!-- メインカラム (Q&Aリスト) -->
+                <div class="w-full md:w-3/4 space-y-4">
+                    
+                    <!-- フィルタタブ -->
+                    <div class="flex border-b border-gray-200">
+                        <button class="px-4 py-2 font-medium text-indigo-600 border-b-2 border-indigo-600">すべて</button>
+                        <button class="px-4 py-2 font-medium text-gray-500 hover:text-gray-700">回答募集中</button>
+                        <button class="px-4 py-2 font-medium text-gray-500 hover:text-gray-700">解決済み</button>
+                    </div>
+
+                    <!-- Q&Aリスト -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <!-- Q&Aアイテム (モック) -->
+                        <a href="detail_question.html" class="block p-5 border-b border-gray-100 hover:bg-gray-50">
+                            <h2 class="text-lg font-semibold text-gray-800">30代後半未経験でWeb業界への転職は可能？</h2>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#キャリア</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#転職</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#30代</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                                <span class="font-medium text-indigo-600">3 回答</span>
+                                <span>@anonymous_user_456・2時間前</span>
+                            </div>
+                        </a>
+                        <!-- Q&Aアイテム (モック) -->
+                        <a href="detail_question.html" class="block p-5 border-b border-gray-100 hover:bg-gray-50">
+                            <h2 class="text-lg font-semibold text-gray-800">NISAとiDeCoの使い分け、どうしてる？</h2>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#お金</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#投資</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#NISA</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                                <span class="font-medium text-green-600">解決済み (8 回答)</span>
+                                <span>@money_wise・1日前</span>
+                            </div>
+                        </a>
+                        <!-- Q&Aアイテム (モック) -->
+                        <a href="detail_question.html" class="block p-5 hover:bg-gray-50">
+                            <h2 class="text-lg font-semibold text-gray-800">育児と仕事の両立、どうやって時間管理していますか？</h2>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#育児</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#仕事</span>
+                                <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">#時短</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mt-4">
+                                <span class="font-medium text-indigo-600">5 回答</span>
+                                <span>@working_mom・3日前</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ページネーション (モック) -->
+                    <div class="flex justify-center pt-8">
+                        <span class="px-4 py-2 rounded-lg bg-indigo-100 text-indigo-700 font-medium">1</span>
+                        <a href="#" class="px-4 py-2 rounded-lg hover:bg-gray-200">2</a>
+                        <a href="#" class="px-4 py-2 rounded-lg hover:bg-gray-200">3</a>
+                        <span class="px-4 py-2">...</span>
+                        <a href="#" class="px-4 py-2 rounded-lg hover:bg-gray-200">次へ &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- サイドバー -->
+                <aside class="w-full md:w-1/4 space-y-8">
+                    <div class="bg-white p-5 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-gray-900 mb-4">人気のタグ</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#キャリア</a>
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#お金</a>
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#転職</a>
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#育児</a>
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#健康</a>
+                            <a href="#" class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-indigo-100">#副業</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-gray-400 mt-20">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p>&copy; 2025 悩みハブ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

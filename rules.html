@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悩みハブ | ルールとガイドライン</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">悩みハブ</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="questions.html" class="text-gray-600 hover:text-indigo-600">Q&A</a>
+                    <a href="articles.html" class="text-gray-600 hover:text-indigo-600">記事</a>
+                    <a href="talks.html" class="text-gray-600 hover:text-indigo-600">つぶやき</a>
+                    <a href="templates.html" class="text-gray-600 hover:text-indigo-600">テンプレ集</a>
+                    <a href="rules.html" class="font-semibold text-indigo-600">ルール</a>
+                    <a href="compose.html" class="ml-4 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 shadow-sm">
+                        投稿する
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold text-gray-900 mb-8">
+                    ルールとガイドライン
+                </h1>
+                
+                <div class="prose max-w-none">
+                    <p>「悩みハブ」は、30代が安心して悩みを共有し、建設的なアドバイスを得られる場所を目指しています。以下のルールを守ってご利用ください。</p>
+
+                    <h2>基本方針</h2>
+                    <p><strong>「安心して書けて、ちゃんと返事が来る場所」</strong>を維持するため、お互いへの敬意を最優先とします。</p>
+
+                    <h2>禁止事項</h2>
+                    <p>以下の行為は禁止です。発見した場合、投稿の削除やアカウントの停止措置を行うことがあります。</p>
+                    <ul>
+                        <li><strong>個人への誹謗中傷・攻撃:</strong> 特定の個人や集団を攻撃したり、貶めたりする表現。</li>
+                        <li><strong>断定的な批判:</strong> 「～するなんてありえない」「そんなのは甘え」といった、相手の状況を考慮しない一方的な批判。</li>
+                        <li><strong>プライバシーの侵害:</strong> 他人の個人情報（氏名、連絡先、勤務先など）を本人の許可なく投稿すること。</li>
+                        <li><strong>過度な営利目的・宣伝:</strong> コミュニティの趣旨と関係のない商品やサービスへの過度な誘導。</li>
+                        <li><strong>公序良俗に反する内容:</strong> 法律に触れる内容、わいせつな表現など。</li>
+                    </ul>
+
+                    <h2>投稿の心がけ (お願い)</h2>
+                    <ul>
+                        <li><strong>質問は具体的に:</strong> 悩みの背景や状況、聞きたいことを具体的に書くと、回答がつきやすくなります。</li>
+                        <li><strong>回答は経験に基づいて:</strong> 憶測や伝聞ではなく、「自分の場合はこうだった」「こういった知識がある」という形でアドバイスをしましょう。</li>
+                        <li><strong>意見の違いを尊重する:</strong> 自分と異なる意見や価値観も、一つの考え方として尊重しましょう。</li>
+                    </ul>
+
+                    <p class="mt-8 p-4 bg-indigo-50 border border-indigo-200 rounded-lg">
+                        <strong>モデレーションについて:</strong><br>
+                        コミュニティの安全性を保つため、運営チームおよびAIによるモデレーションを行っています。不適切な投稿を見かけた場合は、通報機能にてお知らせください。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-gray-400 mt-20">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p>&copy; 2025 悩みハブ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

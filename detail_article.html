@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悩みハブ | 30代の悩みを共有するコミュニティ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* スムーズなスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- ロゴ -->
+                <a href="/index.html" class="text-2xl font-bold text-indigo-600">
+                    悩みハブ
+                </a>
+                
+                <!-- デスクトップ用ナビゲーション -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">Q&A</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">記事</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">つぶやき</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">テンプレ集</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-150">ルール</a>
+                    <a href="#" class="ml-4 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition duration-150 shadow-sm">
+                        投稿する
+                    </a>
+                </div>
+
+                <!-- モバイル用ハンバーガーボタン (JSなしのプレースホルダー) -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="bg-indigo-600 text-white py-20 md:py-32">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">
+                    30代の等身大の悩みを、<br class="md:hidden">安心して書けて、ちゃんと返事が来る場所
+                </h1>
+                <p class="text-lg md:text-xl text-indigo-100 max-w-3xl mx-auto">
+                    仕事・生活・副業・育児・お金・健康など、様々なテーマを匿名で共有し、コミュニティから役立つ知恵や経験を受け取れる場です。
+                </p>
+                <a href="#" class="mt-8 inline-block px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition duration-150 shadow-md">
+                    今すぐ悩みを相談する
+                </a>
+            </div>
+        </section>
+
+        <!-- コンセプトセクション -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    悩みハブのコンセプト
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    「30代の等身大の悩みを、安心して書けて、ちゃんと返事が来る場所」。<br>
+                    実名カルチャーより「ゆるやかな匿名（固定ハンドル）」を基本に、<br class="hidden md:inline">
+                    再現性のある知恵やテンプレートを蓄積していきます。
+                </p>
+            </div>
+        </section>
+
+        <!-- 機能紹介セクション -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">
+                        主要機能
+                    </h2>
+                    <p class="text-lg text-gray-600 mt-2">
+                        悩みを共有し、解決するための機能が揃っています。
+                    </p>
+                </div>
+                
+                <!-- グリッドレイアウト -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- カード1: 投稿機能 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <!-- アイコン (ペン) -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">多彩な投稿</h3>
+                        <p class="text-gray-600">
+                            しっかり書きたい「記事」、気軽に相談できる「Q&A」、短い「つぶやき」を匿名（固定ハンドル）で投稿できます。
+                        </p>
+                    </div>
+
+                    <!-- カード2: タグ・検索 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <!-- アイコン (検索) -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">タグ・検索機能</h3>
+                        <p class="text-gray-600">
+                            「#仕事」「#育児」「#お金」など豊富なタグと全文検索で、あなたの知りたい情報にすぐにたどり着けます。
+                        </p>
+                    </div>
+
+                    <!-- カード3: リアクション・フィード -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <!-- アイコン (ハート) -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">リアクション</h3>
+                        <p class="text-gray-600">
+                            「いいね」「役立った」「共感」で反応を伝えられます。フォローしたタグや人からマイフィードも生成されます。
+                        </p>
+                    </div>
+
+                    <!-- カード4: テンプレ集 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <!-- アイコン (ドキュメント) -->
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">テンプレ集</h3>
+                        <p class="text-gray-600">
+                            転職準備、家計管理、面談チェックリストなど、すぐに使える実践的なテンプレートを集約。悩みの解決をサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 技術スタック & ロードマップ (2カラム) -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <!-- 技術スタック -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                            技術スタック
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-700 mr-3 mt-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </span>
+                                <span class="text-gray-700"><strong class="font-semibold text-gray-900">フロントエンド:</strong> Next.js 15 + TypeScript + Tailwind CSS</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-700 mr-3 mt-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </span>
+                                <span class="text-gray-700"><strong class="font-semibold text-gray-900">バックエンド:</strong> Supabase (Auth + Postgres) または Firebase (Auth + Firestore)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-700 mr-3 mt-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </span>
+                                <span class="text-gray-700"><strong class="font-semibold text-gray-900">検索:</strong> Algolia (Firebaseの場合) または Postgresの全文検索</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-700 mr-3 mt-1">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </span>
+                                <span class="text-gray-700"><strong class="font-semibold text-gray-900">エディタ:</strong> Markdownエディタ (React-Markdownなど)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ロードマップ -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                            ロードマップ
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 font-semibold w-24 flex-shrink-0">Week 1-2:</span>
+                                <span class="text-gray-700">MVP構築（投稿、一覧表示、検索、リアクション）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 font-semibold w-24 flex-shrink-0">Week 3-4:</span>
+                                <span class="text-gray-700">体験の強化（フォロー機能、テンプレ集、未回答ブースト）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 font-semibold w-24 flex-shrink-0">Week 5-6:</span>
+                                <span class="text-gray-700">安全性と拡張（モデレーションキュー、検索強化）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 font-semibold w-24 flex-shrink-0">Week 7-8:</span>
+                                <span class="text-gray-700">公開準備（ガイド、オンボーディング、アナリティクス）</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p>&copy; 2025 悩みハブ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
